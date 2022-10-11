@@ -1,3 +1,8 @@
+#[cfg(target_arch = "arm")]
+mod arm;
+#[cfg(target_arch = "arm")]
+pub use arm::*;
+
 #[cfg(all(target_os = "xous", target_arch = "riscv32"))]
 pub mod riscv;
 #[cfg(all(target_os = "xous", target_arch = "riscv32"))]
